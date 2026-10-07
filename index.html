@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <header class="app-header">
+      <h1>Word Counter</h1>
+      <p>Real-time text metrics and analytics</p>
+    </header>
+
+    <!-- Stats Grid Display -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-value" id="word-count">0</span>
+        <span class="stat-label">Words</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="char-count">0</span>
+        <span class="stat-label">Characters</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="no-space-count">0</span>
+        <span class="stat-label">Chars (no spaces)</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="sentence-count">0</span>
+        <span class="stat-label">Sentences</span>
+      </div>
+      <div class="stat-card stat-card-wide">
+        <span class="stat-value" id="reading-time">0 min</span>
+        <span class="stat-label">Est. Reading Time (200 wpm)</span>
+      </div>
+    </section>
+
+    <!-- Top Words Keyword Section -->
+    <section class="top-words-section">
+      <h2 class="section-title">Top 5 Most Used Words</h2>
+      <ul class="top-words-list" id="top-words-list">
+        <li class="empty-state">No word data available</li>
+      </ul>
+    </section>
+
+    <!-- Text Input Area -->
+    <div class="input-container">
+      <textarea 
+        id="text-input" 
+        placeholder="Type or paste your text here..." 
+        aria-label="Text to analyze"
+      ></textarea>
+    </div>
+
+    <!-- Actions Control Bar -->
+    <footer class="controls">
+      <button id="clear-btn" class="btn btn-danger" type="button">Clear Text</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
